@@ -1,4 +1,4 @@
-# PolygonMaker
+# ShapeMaker
 processing tool to create random polygons
 
 ![image](screen.png)
