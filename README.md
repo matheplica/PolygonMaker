@@ -3,8 +3,11 @@ processing tool to create random polygons
 
 ![image](screen.png)
 
-##Installation
-You need to install Geometry Suite for Processing 2.2 with Contribution Manager 
+## Installation
+
+You need to install Geometry Suite for Processing version 2.2 with Contribution Manager 
+
+## Ussage
 
 Click to merge 2 polygons together
 
