@@ -5,9 +5,9 @@ processing tool to create random polygons
 
 ## Installation
 
-You need to install Geometry Suite for Processing version 2.2 with Contribution Manager 
+You need to install Geometry Suite for Processing version 2.2 with the Contribution Manager 
 
-## Ussage
+## Usage
 
 Click to merge 2 polygons together
 
