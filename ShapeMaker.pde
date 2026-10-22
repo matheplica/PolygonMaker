@@ -3,13 +3,13 @@ import java.util.List;
 import processing.svg.*;
 PShape base, sh;
 ArrayList<PShape> group = new ArrayList<PShape>();
-int reso = 4, marge = 20, first, second, del, mode, seed = int(random(100));
+int reso = 4, marge = 20, first, second, del, mode, seed = 1;
 int[] adapt = new int[2], select = new int[2];
 boolean type = true;
 //large 17cm*37.65 =>640
 void setup() {
   pixelDensity(1);
-  size(640, 480);
+  size(500, 700);
   hint(ENABLE_KEY_REPEAT);
   newShapes();
 }
@@ -39,8 +39,8 @@ void mousePressed() {
     if (mode==0) mode = 1;
     else if (mode==1) {
       if (PGS_ShapePredicates.touch(group.get(select[0]), group.get(select[1]))) {
-        if (PGS_Processing.shapeIntersection(group.get(select[0]), group.get(select[1])).size()>1) {
-          sh = PGS_ShapeBoolean.union(group.get(select[0]), group.get(select[1]));
+       if (PGS_ShapePredicates.vertexCount(PGS_ShapeBoolean.intersectMesh(group.get(select[0]), group.get(select[1])))>1) {
+         sh = PGS_ShapeBoolean.union(group.get(select[0]), group.get(select[1]));
           sh.disableStyle();
           if (sh.getChildCount()>1) mode = 2;
           else addToGroup(sh);
